@@ -1,0 +1,32 @@
+$ RA_DISABLE_PERF=1 rust-analyzer analysis-stats --run-all-ide-things  .
+Database loaded:     224.77ms, 63mb (metadata 93.50ms, 327kb; build 18.71ms, 3152b)
+  item trees: 1
+  dependency lines of code: 1_735_997, item trees: 3_409
+  dependency item stats: traits: 1_049, impl: 15_385, mods: 3_658, macro calls: 7_057, macro rules: 1_520
+Item Tree Collection: 1.74s, 499mb
+  Total Statistics:
+    crates: 1, mods: 1, decls: 17, bodies: 12, adts: 6, consts: 10, signatures: 23, variants: 7
+  Workspace:
+    traits: 0, macro_rules macros: 0, proc_macros: 0
+    lines of code: 53, item trees: 1
+    usages: traits: 0, impl: 0, mods: 0, macro calls: 3, macro rules: 0
+  Dependencies:
+    lines of code: 1_735_997, item trees: 3_409
+    declarations: traits: 1_049, impl: 15_385, mods: 3_658, macro calls: 7_057, macro rules: 1_520
+Item Collection:     1.17s, 255mb
+Crate lang items:    165.53ms, 32mb
+Expression Store Lowering: 1.39ms, 270kb               
+  exprs: 123, ??ty: 0 (0%), ?ty: 2 (1%), !ty: 0       
+  pats: 0, ??ty: 0 (100%), ?ty: 0 (100%), !ty: 0
+  panics: 0
+Inference:           199.79ms, 53mb
+MIR lowering:        207.87µs, 41kb                     
+Mir failed bodies: 0 (0%)
+Data layouts:        54.06µs, 9kb
+Failed data layouts: 0 (0%)
+Const evaluation:    3.69ms, 628kb                    
+Failed const evals: 1 (10%)
+0/1 0% diagnostics: /home/wouter/tmp/ra-stackoverflow/src/lib.rs
+thread 'main' (3052235) has overflowed its stack
+fatal runtime error: stack overflow, aborting
+Aborted                    (core dumped) RA_DISABLE_PERF=1 rust-analyzer analysis-stats --run-all-ide-things .
